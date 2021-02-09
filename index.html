@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scaling Tests</title>
+
+  <link href='style.css' rel='stylesheet' />
+</head>
+<body>
+
+  <div class="main-container">
+
+    <div class='background-image-div'></div>
+
+    <!-- didn't really do what I intended -->
+    <!-- <div class='image-wrapper'>
+      <img class='background-image' src="threehands.jpg" />
+    </div> -->
+
+    <nav class='navbar'>
+
+      <div class='navtitle'>
+        the navbar
+      </div>
+
+      <div class='title-div'>
+        
+        <h1>THE TITLE</h1>
+        <h3>subtitle</h3>
+
+      </div>
+    </nav>
+
+    <div class='explanation'>
+      testing out transitions for scaling a nav and all its children. click "THE TITLE" or "subtitle" to see. The next step is to have it expand to center the title on the screen, regardless of screen size.
+    </div>
+  </div>
+
+  <script>
+    let titleElement = document.querySelector("h1");
+    let subtitleElement = document.querySelector('h3');
+    let navElement = document.querySelector('.navbar');
+    let navClasses = navElement.classList;
+    let backgroundImg = document.querySelector('.background-image-div');
+    let backgroundClasses = backgroundImg.classList;
+
+    titleElement.addEventListener('click', () => {
+      navClasses.toggle('largenav');
+      backgroundClasses.toggle('largeimage');
+    });
+
+    subtitleElement.addEventListener('click', () => {
+      navClasses.toggle('largenav');
+      backgroundClasses.toggle('largeimage');
+    });
+  </script>
+  
+</body>
+</html>
